@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
@@ -25,35 +26,31 @@ public class Main {
         printStringForLoop("What?", 5);
         System.out.println();
 
-        changeZeroToOneArray();
+        System.out.println(isLeapYear(2016));
         System.out.println();
+
+        changeZeroToOneArray();
         System.out.println();
 
         fillArray();
         System.out.println();
-        System.out.println();
 
         mulArrayElements();
         System.out.println();
+
+        fillInMatrix();
         System.out.println();
 
         int[] newArray = createArray(5, 12);
-        for (Integer num : newArray) {
-            System.out.println(num);
-        }
-        System.out.println();
-
-        System.out.println(isLeapYear(2016));
-        System.out.println();
-
-        fillInMatrix();
+        System.out.println(Arrays.toString(newArray));
     }
 
     public static void printThreeWords() {
         System.out.println("Первое задание:");
-        System.out.println("Orange");
-        System.out.println("Banana");
-        System.out.println("Apple");
+        String first_fruit = "Orange";
+        String second_fruit = "Banana";
+        String third_fruit = "Apple";
+        System.out.println(first_fruit + "\n" + second_fruit + "\n" + third_fruit);
     }
 
     public static void checkSumSign() {
@@ -74,7 +71,7 @@ public class Main {
         if (value <= 0) {
             System.out.println("красный");
         }
-        if (value > 0 && value <= 100) {
+        if (value <= 100) {
             System.out.println("желтый");
         }
         if (value > 100) {
@@ -108,8 +105,7 @@ public class Main {
         System.out.println("Шестое задание");
         if (a >= 0) {
             System.out.println("число положительное");
-        }
-        if (a < 0) {
+        } else {
             System.out.println("число отрицательное");
         }
     }
@@ -119,8 +115,7 @@ public class Main {
         boolean isPositive = false;
         if (a >= 0) {
             isPositive = false;
-        }
-        if (a < 0) {
+        } else {
             isPositive = true;
         }
         return isPositive;
@@ -154,9 +149,7 @@ public class Main {
                 initArray[i] = 1;
             }
         }
-        for (Integer num : initArray) {
-            System.out.print(num);
-        }
+        System.out.println(Arrays.toString(initArray));
     }
 
     public static void fillArray() {
@@ -165,9 +158,7 @@ public class Main {
         for (int i = 0; i < initArray.length; i++) {
             initArray[i] = i + 1;
         }
-        for (Integer in : initArray) {
-            System.out.print(in);
-        }
+        System.out.println(Arrays.toString(initArray));
     }
 
     public static void mulArrayElements() {
@@ -178,9 +169,7 @@ public class Main {
                 initArray[i] = initArray[i] * 2;
             }
         }
-        for (Integer num : initArray) {
-            System.out.print(num + " ");
-        }
+        System.out.println(Arrays.toString(initArray));
     }
 
     public static void fillInMatrix() {
